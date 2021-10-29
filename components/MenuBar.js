@@ -19,7 +19,13 @@ export function DropdownMenu(props){
     return (
         <div className="menu_container center">
             <div ref={menuRef} className="menubar center" onClick={()=>{setIsOpen(!isOpen)}}>
-                <FontAwesomeIcon key={props.menu_name} icon={props.icon} size='1x'/>
+                {props.use_fa && 
+                    <FontAwesomeIcon key={props.menu_name} icon={props.icon} size='1x'/>
+                }
+                {!props.use_fa && 
+                    <img src={props.icon} className="icon-button" width={16} height={16}/>
+                }
+                
             </div>
             <div ref={dropdownRef} className={"dropdown " + 'drop_from_'+props .side_to_drop} open={isOpen}>
                 {props.children}

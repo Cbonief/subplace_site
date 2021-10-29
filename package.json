@@ -14,11 +14,13 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "fontawesome": "^5.6.3",
+    "googleapis": "^89.0.0",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "^4.4.2",
+    "swiper": "^7.0.8"
   },
   "devDependencies": {
     "eslint": "7.32.0",

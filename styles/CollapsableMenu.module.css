@@ -1,0 +1,21 @@
+.button{
+    border: 0px none;
+    width: 100%;
+    height: fit-content;
+    padding: 2px;
+    background-color: rgba(200, 200, 200, 1);
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+.menu_name{
+    margin-left: 10px;
+}
+
+.arrow_container{
+    margin-left: 2px;
+}

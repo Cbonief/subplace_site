@@ -1,0 +1,37 @@
+
+.item_name{
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+.item_description{
+    font-size: 16px;
+    text-align: justify; 
+}
+
+.item_photo{
+    height: 70px;
+    width: 70px;
+}
+
+.item_container{
+    display: flex;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+
+.desciption_container{
+    margin: 0 10px 0 10px;
+}
+
+.price_container{
+    vertical-align: middle;
+    padding: 0px 2px;
+}
+
+.item_price{
+    height: fit-content;
+    margin: auto 0px;
+    font-weight: bold;
+}

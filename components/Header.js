@@ -31,7 +31,7 @@ export default function Header(){
     return (
         <header>
             <div className="header_container">
-                <DropdownMenu key={0} icon={faBars} menu_name={'nav'} side_to_drop='right'>
+                <DropdownMenu key={0} icon={faBars} menu_name={'nav'} side_to_drop='right' use_fa={true}>
                     {dropdown_info.map((item) => (
                         <DropdownItem key={item.href} leftIcon={item.icon} use_fa={true}>
                             <Link key={item.href} href={item.href} passHref>
@@ -47,7 +47,7 @@ export default function Header(){
                         </div>
                     </Link>
                 </div>
-                <DropdownMenu key={1} icon={faGlobe} menu_name={'lang'} side_to_drop='left'>
+                <DropdownMenu key={1} icon={faGlobe} menu_name={'lang'} side_to_drop='left' use_fa={true}>
                     {languages.map((language) => (
                         <DropdownItem key={language.code} leftIcon={language.flag_icon}>
                             <p>{language.name}</p>

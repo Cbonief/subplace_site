@@ -4,13 +4,19 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url('/bg-fundo2.webp');
 }
+
+
 
 :root{
   --speed: 500ms;
   --dropdown-bg: #282325;
   --dropdown-border: 3px solid #555555;
   --dropdown-border-radius: 4px;
+  --slider-width: vw;
+  --slider-height: 100px;
+  --slider-manual-position: calc(var(--slider-height) - 100% - 5px);
 }
 
 header {
@@ -21,12 +27,18 @@ p{
   margin: 0;
 }
 
-header .header_container{
-  margin-bottom: 20px;
-  width: 100%;
-  height: fit-content;
+header{
   left: 0;
   top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  float: left;
+}
+
+header .header_container{
+  margin-bottom: 5px; 
+  height: 60px;
   background: #282325;
   display: flex;
 }
@@ -41,11 +53,14 @@ header .title_container{
   margin: 0px auto;
 }
 
+main{
+  margin-top: 65px;
+}
 
 header .title_image{
   width: 60px;
   height: 60px;
-  margin: 10px 10px;
+  margin: 0px 0px;
   cursor: pointer;
 }
 
@@ -61,6 +76,7 @@ footer {
   margin-top: 40px;
   bottom: 0;
   width: 100%;
+  display: none;
 }
 
 .footer-container{
@@ -121,7 +137,7 @@ a.instagram {
 }
 
 .dropdown.drop_from_right[open]{
-  transform: translate(29%, 0px);
+  transform: translate(29%, 5px);
 }
 
 .dropdown.drop_from_left{
@@ -129,7 +145,7 @@ a.instagram {
 }
 
 .dropdown.drop_from_left[open]{
-  transform: translate(-29%, 0px);
+  transform: translate(-29%, 5px);
 }
 
 .menubar{
@@ -164,4 +180,85 @@ a.instagram {
 
 * {
   box-sizing: border-box;
+}
+
+
+.slider-btn-container{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.slider-btn-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.slider-btn-container:not(:last-child){
+  margin-right: 10px;
+}
+
+/* Create a custom radio button */
+.slider-btn-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 500ms;
+  background-color: white;
+}
+
+/* On mouse-over, add a grey background color */
+.slider-btn-container:hover input ~ .slider-btn-checkmark {
+  background-color:   ;
+}
+
+/* When the radio button is checked, add a blue background */
+.slider-btn-container input:checked ~ .slider-btn-checkmark {
+  background-color: grey;
+}
+
+.test{
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+.swiper-container{
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+}
+
+.call-floater{
+  height: 45px;
+  width: 45px;
+  position: fixed;
+  bottom: 45px;
+  right: 10px;
+  z-index: 999999;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid;
+  border-color: #232022;
+  background-color: #2F2F2F;
+  vertical-align: middle;
+}
+
+img.item{
+  height: 100%;
+  width: auto;
 }
