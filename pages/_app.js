@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
       <Footer />
-      <a href="tel:561-852-8390" class="call-floater">
+      <a href="tel:561-852-8390" className="call-floater">
         <FontAwesomeIcon icon={faPhone} size='2x' color='white'/>
       </a>
     </>

@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <ImageSlider/>
+      <ImageSlider key={0}/>
       <div className={styles.section}>
         <div className='center'>
           <p>Our History</p>
