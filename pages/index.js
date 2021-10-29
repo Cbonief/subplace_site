@@ -37,9 +37,9 @@ export default function Home() {
         </div>
         <div >
           {reordered_hours.map(({day, hour}, index) => (
-            <p>
+            <p key={index}>
               {index==0 &&
-                <b key={index}>{day}: {hour}</b>
+                <b>{day}: {hour}</b>
               }
               {!index==0 &&
                 `${day}: ${hour}`
