@@ -15,7 +15,6 @@ export default function ImageSlider(props){
     const [option, setOption] = useState('0');
 
     function set(value){
-        console.log(value);
         setOption(value);
     }
 

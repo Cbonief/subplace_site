@@ -1,0 +1,29 @@
+.section{
+    width: 90%;
+    margin: 20px auto;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.save_button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    width: 10rem;
+}
+
+.revert_button {
+    background-color: rgb(218, 53, 65);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    width: 10rem;
+    margin-left: 20px;
+}

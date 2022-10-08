@@ -1,0 +1,72 @@
+.button{
+    border: 0px none;
+    width: 100%;
+    height: fit-content;
+    padding: 2px;
+    background-color: rgba(200, 200, 200, 1);
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.container{
+    margin-top: 20px;
+    height: auto;
+}
+
+.menu_name{
+    margin-left: 10px;
+    border: none;
+    display: inline;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    padding: none;
+    width: auto;
+    color: black;
+    background-color: rgba(200, 200, 200, 1);
+}
+
+.arrow_container{
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.name_edit_container{
+    margin-right: 2px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.items_container[open]{
+    clip: rect(auto, auto, 10rem, auto);
+    opacity: 1;
+    max-height: 3000px;
+    pointer-events: auto;
+}
+
+.items_container{
+    pointer-events: none;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out, max-height 250ms ease-in-out;
+}
+
+.add_item_button{
+    width: 36%;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plus_container{
+    width: fit-content;
+    height: auto;
+}
