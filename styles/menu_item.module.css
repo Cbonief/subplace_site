@@ -10,9 +10,21 @@
     text-align: justify; 
 }
 
+.discount_container{
+    background-color: green;
+    position: relative;
+    bottom: 10;
+    z-index: 2;
+}
+
+.image_container{
+    width: 80px;
+    height: 80px;
+}
+
 .item_photo{
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
 }
 
 .item_container{
@@ -28,6 +40,7 @@
 .price_container{
     vertical-align: middle;
     padding: 0px 2px;
+    margin-left: auto;
 }
 
 .item_price{

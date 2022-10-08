@@ -2,6 +2,7 @@ import Link from 'next/link'
 import {faCoffee, faCompass, faComment, faBars, faGlobe} from '@fortawesome/free-solid-svg-icons'
 import {DropdownMenu, DropdownItem} from './MenuBar';
 import {useState, useEffect, useRef} from 'react';
+import Image from 'next/image';
 
 const dropdown_info = [
     {href: '/menu', text: 'Menu', icon: faCoffee},
@@ -14,14 +15,14 @@ var languages = [
       code: 'en',
       name: 'English',
       country_code: 'gb',
-      flag_icon: 'us_flag.png'
+      flag_icon: '/us_flag.png'
     },
     {
       code: 'pt-br',
       name: 'Português',
       dir: 'rtl',
       country_code: 'sa',
-      flag_icon: 'br_flag.png'
+      flag_icon: '/br_flag.png'
     },
 ]
 
@@ -42,8 +43,8 @@ export default function Header(){
                 </DropdownMenu>
                 <div className='title_container'>
                     <Link key={'title_image_link'} href={'/'} passHref>
-                        <div className="center cropped">
-                            <img className='title_image' src="logo2.png"></img>
+                        <div className="center">
+                            <Image className="title-image" src="/logo2.png" width="60" height="60"/>
                         </div>
                     </Link>
                 </div>

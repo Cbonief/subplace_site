@@ -39,6 +39,7 @@ header{
 header .header_container{
   margin-bottom: 5px; 
   height: 60px;
+  margin-bottom: 2px;
   background: #282325;
   display: flex;
 }
@@ -53,18 +54,18 @@ header .title_container{
   margin: 0px auto;
 }
 
+
+
 main{
   margin-top: 65px;
 }
 
-header .title_image{
-  width: 60px;
-  height: 60px;
-  margin: 0px 0px;
+img.title-image{
   cursor: pointer;
 }
 
-h1{
+
+.body-text{
   font-size: smaller;
 }
 
@@ -116,7 +117,7 @@ a.instagram {
 .dropdown {
   position: absolute;
   top: 58px;
-  width: 125px;
+  width: 134px;
   background-color: var(--dropdown-bg);
   border: var(--dropdown-border);
   border-radius: var(--dropdown-border-radius);
@@ -125,6 +126,10 @@ a.instagram {
   overflow: hidden;
   opacity: 0;
   transition: opacity var(--speed) ease-in-out, transform var(--speed) ease-in-out;
+}
+
+.teste{
+  font-size: 16px;
 }
 
 .dropdown[open] {
@@ -150,6 +155,7 @@ a.instagram {
 
 .menubar{
   padding: 6px;
+  cursor: pointer;
 }
 
 .menu {
@@ -166,12 +172,9 @@ a.instagram {
   cursor: pointer;
 }
 
-.menu-item .icon-button {
-  margin-right: 0.5rem;
-}
 
-.menu-item .icon-button:hover {
-  filter: none;
+.menu-item-child{
+  margin-left: 0.5rem;
 }
 
 .menu-item:hover {
@@ -180,54 +183,6 @@ a.instagram {
 
 * {
   box-sizing: border-box;
-}
-
-
-.slider-btn-container{
-  display: block;
-  position: relative;
-  cursor: pointer;
-  padding: 5px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.slider-btn-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.slider-btn-container:not(:last-child){
-  margin-right: 10px;
-}
-
-/* Create a custom radio button */
-.slider-btn-checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 13px;
-  width: 13px;
-  padding: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 500ms;
-  background-color: white;
-}
-
-/* On mouse-over, add a grey background color */
-.slider-btn-container:hover input ~ .slider-btn-checkmark {
-  background-color:   ;
-}
-
-/* When the radio button is checked, add a blue background */
-.slider-btn-container input:checked ~ .slider-btn-checkmark {
-  background-color: grey;
 }
 
 .test{
@@ -255,6 +210,26 @@ a.instagram {
   border: 1px solid;
   border-color: #232022;
   background-color: #2F2F2F;
+  vertical-align: middle;
+}
+
+.logout-floater{
+  position: fixed;
+  bottom: 45px;
+  left: 10px;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+}
+
+.logout-floater-button{
+  height: 45px;
+  width: 45px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid;
+  border-color: darkred;
+  background-color: red;
   vertical-align: middle;
 }
 

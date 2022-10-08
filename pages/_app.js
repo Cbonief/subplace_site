@@ -1,28 +1,21 @@
 import '../styles/globals.css'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faPho,
-    faInstagram,
-  } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faHighlighter } from '@fortawesome/free-solid-svg-icons';
 
+import { Provider } from 'react-redux';
+import { store , wrapper} from '../redux/store';
+import { logoutManager } from '../redux/actions/loginManager';
+import { useState } from 'react';
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Header />
-      <main>
+function MyApp({ Component, pageProps }){
+
+  return(
+    <Provider store={store}>      
         <Component {...pageProps} />
-      </main>
-      <Footer />
-      <a href="tel:561-852-8390" className="call-floater">
-        <FontAwesomeIcon icon={faPhone} size='2x' color='white'/>
-      </a>
-    </>
-  )
+    </Provider>
+  );
 }
 
-export default MyApp
+export default wrapper.withRedux(MyApp);
   
